@@ -8,9 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>Guess the number</div>
 
+    <div class="container">
+        <div class="score">
+            <div>Points: <span id="points">20</span></div>
+            <div>The best result: <span id="best">0</span></div>
+        </div>
+        <div class="guess-title">Guess the number Game</div>
 
+        <div>Guess a number between 1 and 100</div>
+        <input type="number" name="guess-input" class="guess-input" id="guess-input">
+        <div>
+            <button class="guess-btn" id="guess-btn">Guess</button>
+            <button class="guess-btn" id="restart-btn">Restart</button>
+        </div>
+        <div class="guess-number" id="guess-number-box">???</div>
+        <div class="guess-message" id="guess-message"></div>
+
+    </div>
 
 
     <script src="app.js"></script>
