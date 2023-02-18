@@ -9,7 +9,7 @@ let   pointsContent = 20,
       points = document.querySelector('#points'),
       best = document.querySelector('#best'),
       bestScore = 0,
-      guessNumber = Math.floor(Math.random() * 101);
+      guessNumber = Math.floor(Math.random() * 100) + 1;
 
 function guessNum() {
     let inputValue = document.querySelector('#guess-input').value;
@@ -18,8 +18,8 @@ function guessNum() {
 
     if (!inputValue) {
         guessMessage.textContent = 'Please, enter the number!';
-    } else if (inputValue < 0 || inputValue > 100) {
-        guessMessage.textContent = 'Please, enter the number between 0 and 100!';
+    } else if (inputValue < 1 || inputValue > 100) {
+        guessMessage.textContent = 'Please, enter the number between 1 and 100!';
     } else {
         pointsContent --;
         points.textContent = pointsContent;
@@ -53,7 +53,7 @@ function clear() {
     guessMessage.textContent = '';
     guessMessage.style.display = 'none';
     guessNumberBox.textContent = '???';
-    guessNumber = Math.floor(Math.random() * 101);
+    guessNumber = Math.floor(Math.random() * 100) + 1;
     points.textContent = '20';
     pointsContent = 20;
     guessBtn.disabled = false;
